@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3">
+
+    <EditText
+        android:id="@+id/ED_NAME_MOVIE"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="144dp"
+        android:ems="10"
+
+        android:background="#D3D2D2"
+        android:hint="Movie"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ED_RUNTIME_MOVIE"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Running time"
+        android:background="#D3D2D2"
+
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/ED_TYPE_MOVIE"
+        app:layout_constraintStart_toStartOf="@+id/ED_TYPE_MOVIE"
+        app:layout_constraintTop_toBottomOf="@+id/ED_TYPE_MOVIE" />
+
+    <EditText
+        android:id="@+id/ED_TYPE_MOVIE"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Movie genres"
+        android:background="#D3D2D2"
+
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/ED_NAME_MOVIE"
+        app:layout_constraintStart_toStartOf="@+id/ED_NAME_MOVIE"
+        app:layout_constraintTop_toBottomOf="@+id/ED_NAME_MOVIE" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ED_RUNTIME_MOVIE" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="@+id/update_button"
+        app:layout_constraintStart_toStartOf="@+id/update_button"
+        app:layout_constraintTop_toBottomOf="@+id/update_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

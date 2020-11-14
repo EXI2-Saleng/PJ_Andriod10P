@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    tools:context=".AddMovieActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Select Image"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/movie_edit_text"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="#D3D2D2"
+        android:hint="Movie"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <EditText
+        android:id="@+id/runtime_edit_text"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:background="#D3D2D2"
+        android:hint="Running time (min)"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/movie_genres_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/movie_genres_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/movie_genres_edit_text" />
+
+    <EditText
+        android:id="@+id/movie_genres_edit_text"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="#D3D2D2"
+        android:hint="Movie genres"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/movie_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/movie_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/movie_edit_text" />
+
+    <EditText
+        android:id="@+id/plot_edit_text"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="#D3D2D2"
+        android:hint="Plot"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/runtime_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/runtime_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/runtime_edit_text" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_button_pressed"
+        android:text="Add"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plot_edit_text"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="133dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selectpic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
