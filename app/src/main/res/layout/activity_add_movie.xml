@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Select Image"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -21,29 +22,28 @@
         android:id="@+id/movie_edit_text"
         android:layout_width="262dp"
         android:layout_height="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="72dp"
         android:background="#D3D2D2"
         android:hint="Movie"
         android:textColorHint="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/runtime_edit_text"
         android:layout_width="262dp"
         android:layout_height="52dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:background="#D3D2D2"
         android:hint="Running time (min)"
         android:inputType="number"
         android:textColorHint="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/movie_genres_edit_text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/movie_genres_edit_text"
-        app:layout_constraintTop_toBottomOf="@+id/movie_genres_edit_text" />
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup_TYPE"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_TYPE"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_TYPE" />
 
     <EditText
         android:id="@+id/movie_genres_edit_text"
@@ -54,6 +54,7 @@
         android:hint="Movie genres"
         android:textColorHint="#000000"
         android:textSize="18sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/movie_edit_text"
         app:layout_constraintStart_toStartOf="@+id/movie_edit_text"
         app:layout_constraintTop_toBottomOf="@+id/movie_edit_text" />
@@ -89,12 +90,89 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="133dp"
-        android:layout_height="183dp"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/selectpic" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_TYPE"
+        android:layout_width="288dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/movie_edit_text"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="@+id/movie_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/movie_edit_text">
+
+        <RadioButton
+            android:id="@+id/radioButton_Adventure"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Adventure"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Comedy"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Comedy"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Drama"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Drama"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Erotica"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Erotica"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Fantasy"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Fantasy"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Horror"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Horror"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Sci_Fi"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sci-Fi"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Western"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Western"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
